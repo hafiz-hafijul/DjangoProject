@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Document{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.css' %}">
+</head>
+<body>
+    <div class="container mt-5 ">
+        <h2 class="text-center alert alert-danger">This data table</h2>
+        {% block content %} {% endblock content %}
+    </div>
+
+    <script src="{% static 'blog/js/jquery.js' %}"></script>
+    <script src="{% static 'blog/js/popper.js' %}"></script>
+    <script src="{% static 'blog/js/bootstrap.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block basecss %}
+  <link rel="stylesheet" href="{% static 'blog/css/about.css' %}">
+{% endblock basecss %}
+
+{% block title %}
+About
+{% endblock title %}
+
+{% block images %}
+    <img src="{% static 'blog/images/pic1.jpg' %}" alt="Mine">
+{% endblock images %}
+
+
+{% block myself %}
+<div>
+    <h2>Md.Hafijul Islam</h2>
+    <h2>Mobile No. 123456</h2>
+</div>
+{% endblock myself %}
+
+
+{% block content %}
+<div>
+    <h2>
+        <p>I am a human. I myself am humble, kind, caring and courageous. I am most respected, loved and responsible human being. Though, it is quite hard to write about yourself yet I have tried myself best to express all about myself.</p>
+    </h2>
+</div>
+{% endblock content %}

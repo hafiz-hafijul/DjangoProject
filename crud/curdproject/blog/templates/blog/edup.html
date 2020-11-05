@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block title %}Edit{% endblock title %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-8">
+            <form action="{% url 'home' %}" method="POST"> {% csrf_token %}
+                <h4 class="text-center alert alert-info">Add new form</h4>
+                {{form.as_p}}
+                <input type="submit" value="Edit" class="btn btn-success">
+                <a href="{% url 'home' %}" class="btn btn-info">Home</a>
+
+            </form>
+        </div>
+    </div>
+{% endblock content %}
+ 

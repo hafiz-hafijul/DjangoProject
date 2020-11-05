@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign UP</title>
+</head>
+<body>
+    <form action="" method="post" novalidate> {% csrf_token %}
+        {% for fm in form %}
+            {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br><br>
+        {% endfor %}
+        <input type="submit" value="Signin">
+    </form> <br>
+    <a href="{% url 'login' %}"><input type="button" value="login"></a>
+    
+    {% if messages %}
+        
+        {% for message in messages %}
+            <p {% if message.tag %} class="message.tag"{% endif %}>{{message}}</p>
+        {% endfor %}
+            
+    {% endif %}
+        
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Password Generator</h1><br>
+    <form action="{% url 'password' %}", method="GET">
+        <select name="length">
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10" selected>10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+        </select><br>
+        <input type="checkbox" value="uppercase"> UpperCases <br>
+        <input type="checkbox" value="number"> Numbers <br>
+        <input type="checkbox" value="special"> Special <br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

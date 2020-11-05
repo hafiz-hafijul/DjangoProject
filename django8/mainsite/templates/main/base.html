@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+
+    
+    {% block basecss %}
+    <link rel="stylesheet" href="{% static 'core/css/base.css' %}">
+    {% endblock basecss %}
+
+
+</head>
+<body>
+
+<ul>
+    <li>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'course' %}">Course</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </li>
+</ul>
+
+    {% block home %}{% endblock home %}
+    {% block images %}{% endblock images %}
+    {% block myself %}{% endblock myself %}
+    {% block content %}{% endblock content %}
+</body>
+</html>
